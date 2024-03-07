@@ -65,7 +65,7 @@ function(GetCEFFileInfoForVesion INPUT_VERSION)
   # Fetch index file to resolve file name and sha1
   set(INDEX_FILE "${CMAKE_BINARY_DIR}/index.json")
   message(STATUS "Downloading index.json to ${INDEX_FILE}")
-  file(DOWNLOAD https://cef-builds.spotifycdn.com/index.json ${INDEX_FILE} LOG ${DL_LOG})
+  file(DOWNLOAD https://cef-builds.spotifycdn.com/index.json ${INDEX_FILE} LOG DL_LOG)
   message(STATUS "${DL_LOG}")
 
   if (CMAKE_BUILD_TYPE STREQUAL "Release")
