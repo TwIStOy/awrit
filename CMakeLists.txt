@@ -75,6 +75,7 @@ function(GetCEFFileInfoForVesion INPUT_VERSION)
 
   # Read the file to memory and get the number of versions
   file(READ "${CMAKE_BINARY_DIR}/index.json" INDEX_CONTENT)
+  message(STATUS "${INDEX_CONTENT}")
   string(JSON CEF_VERSIONS GET "${INDEX_CONTENT}" "${CEF_PLATFORM}" versions)
   string(JSON CEF_VERSIONS_LENGTH LENGTH "${CEF_VERSIONS}")   
 
